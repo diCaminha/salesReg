@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Negociações</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+</head>
+<body class="container">
+
+    <h1 class="text-center">Negociations</h1>
+
+    <form class="form" onsubmit="negociationController.adiciona(event)">
+
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" class="form-control" required autofocus/>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" min="1" step="1" id="quantity" class="form-control" value="1" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input id="price" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
+        </div>
+
+        <button class="btn btn-success" type="submit">Add</button>
+    </form>
+
+    <div class="text-center">
+        <button class="btn btn-primary text-center" type="button">
+            Import Negociations
+        </button>
+        <button class="btn btn-danger text-center" type="button">
+            Reset
+        </button>
+    </div>
+    <br>
+    <br>
+
+    <div id="negociations-view"></div>  
+
+
+    <script src="js/app/models/Negociation.js"></script>
+    <script src="js/app/views/NegociationView.js"></script>
+    <script src="js/app/models/ListNegociations.js"></script>
+    <script src="js/app/controllers/NegociationController.js"></script>
+    <script>
+
+      let negociationController = new NegociationController();
+      let negociationView = new NegociationView();
+
+    </script>
+  </body>
+</html>
