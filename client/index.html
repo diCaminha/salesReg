@@ -9,9 +9,11 @@
 </head>
 <body class="container">
 
-    <h1 class="text-center">Negociations</h1>
+    <h1 class="text-center">Negotiations</h1>
 
-    <form class="form" onsubmit="negociationController.adiciona(event)">
+    <div id="message-view"></div>
+
+    <form class="form" onsubmit="negotiationController.adiciona(event)">
 
         <div class="form-group">
             <label for="date">Date</label>
@@ -33,7 +35,7 @@
 
     <div class="text-center">
         <button class="btn btn-primary text-center" type="button">
-            Import Negociations
+            Import negotiations
         </button>
         <button class="btn btn-danger text-center" type="button">
             Reset
@@ -42,17 +44,18 @@
     <br>
     <br>
 
-    <div id="negociations-view"></div>  
+    <div id="negotiations-view"></div>
 
 
-    <script src="js/app/models/Negociation.js"></script>
-    <script src="js/app/views/NegociationView.js"></script>
-    <script src="js/app/models/ListNegociations.js"></script>
-    <script src="js/app/controllers/NegociationController.js"></script>
+    <script src="js/app/controllers/NegotiationController.js"></script>
+    <script src="js/app/models/Negotiation.js"></script>
+    <script src="js/app/models/ListNegotiations.js"></script>
+    <script src="js/app/models/Message.js"></script>
+    <script src="js/app/views/NegotiationView.js"></script>
+    <script src="js/app/views/MessageView.js"></script>
     <script>
 
-      let negociationController = new NegociationController();
-      let negociationView = new NegociationView();
+      let negotiationController = new NegotiationController();
 
     </script>
   </body>

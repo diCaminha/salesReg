@@ -1,4 +1,4 @@
-class NegociationView {
+class NegotiationView {
 
   constructor(elementDOM){
     this._elementDOM = elementDOM;
@@ -22,7 +22,7 @@ class NegociationView {
         </thead>
 
         <tbody>
-          ${model.negociations.map(n =>
+          ${model.negotiations.map(n =>
 
              `
                 <tr>
@@ -39,7 +39,7 @@ class NegociationView {
         <tfoot>
           <td colspan="2"></td>
           <td>TOTAL:</td>
-          <td>${model.negociations.reduce((total,n)=>  total + n.volume,0.0)}</td>
+          <td>${model.negotiations.reduce((total,n)=>  total + n.volume,0.0)}</td>
         </tfoot>
     </table>
 

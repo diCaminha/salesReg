@@ -1,4 +1,4 @@
-class Listnegotiations {
+class ListNegotiations {
 
   constructor(){
     this._negotiations = []
